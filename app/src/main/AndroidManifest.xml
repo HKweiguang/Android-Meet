@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.huangk.meet">
+
+    <application
+        android:name=".base.BaseApp"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="false">
+
+        <!-- OPPO -->
+        <meta-data
+            android:name="android:max_aspect"
+            android:value="2.2" />
+
+        <!-- XiaoMi -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+
+        <!-- Bmob -->
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.huangk.meet.BmobContentProvider"
+            android:exported="false">
+        </provider>
+
+        <activity
+            android:name=".ui.IndexActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFull">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.GuideActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/AppThemeFull" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask" />
+
+    </application>
+
+</manifest>
